@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { FloatingNav } from "@/components/acernityui/floating-navbar";
+import { navItems } from "@/data/config/nav.config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} max-w-2xl mx-auto`}
+      >
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
         {children}
       </body>
     </html>
