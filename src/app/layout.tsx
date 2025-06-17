@@ -30,9 +30,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} max-w-2xl mx-auto`}
       >
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <Navbar />
-        </div>
+        </div> */}
         {children}
       </body>
     </html>
