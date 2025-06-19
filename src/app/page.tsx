@@ -18,6 +18,7 @@ import { PROJECTS } from "../data/config/project.config";
 import { ProjectCard } from "@/components/project-card";
 import { PlaceholdersAndVanishInput } from "@/components/acernityui/placeholders-and-vanish-input";
 import { toast } from "sonner";
+import { ResumeCard } from "@/components/resume-card";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Home() {
@@ -81,7 +82,7 @@ export default function Home() {
     }
   };
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10 mt-4">
+    <main className="flex flex-col min-h-[100dvh] space-y-10 ">
       <Spotlight
         className="fixed -top-40 left-0 md:left-60 md:-top-20"
         fill="white"
@@ -137,6 +138,31 @@ export default function Home() {
           </div>
         </BlurFade>
       </section>
+
+      <section id="education">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Education</h2>
+          </BlurFade>
+          {DATA.education.map((education, id) => (
+            <BlurFade
+              key={education.school}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+            >
+              <ResumeCard
+                key={education.school}
+                href={education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+
       <section id="tech-stack">
         <BlurFade delay={BLUR_FADE_DELAY * 6}>
           <Skill />
