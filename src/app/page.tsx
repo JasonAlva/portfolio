@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { Button } from "@/components/ui/button";
-import { Globe } from "@/components/magicui/globe";
+
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Skill } from "@/components/Skill";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -170,61 +170,44 @@ export default function Home() {
       </section>
 
       <section id="projects">
-        <div className="flex flex-col items-center">
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm mb-5">
-              Epic Builds 🈂️
+        <div className="space-y-12 w-full py-12">
+          <BlurFade delay={BLUR_FADE_DELAY * 11}>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  My Projects
+                </div>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Check out my latest work
+                </h2>
+                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  I&apos;ve worked on a variety of projects, from simple
+                  websites to complex web applications. Here are a few of my
+                  favorites.
+                </p>
+              </div>
             </div>
           </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 11}>
-            <BlurFade delay={BLUR_FADE_DELAY}>
-              <div className="space-y-12 w-full">
-                <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                  <div className="space-y-2">
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mt-2">
-                      Some of my cool shits
-                    </h2>
-                    <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                      I&apos;ve been buildin' some dope Web3 stuff, from slick
-                      dApps to full-blown solutions. Here’s a taste of my favs –
-                      check out more{" "}
-                      <Link
-                        href="/projects"
-                        className="text-blue-500 hover:underline"
-                      >
-                        projects page
-                      </Link>
-                      .
-                    </p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto mt-8">
-                  {PROJECTS.filter((project) => project.featured).map(
-                    (project, id) => (
-                      <BlurFade
-                        key={project.title}
-                        delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-                      >
-                        <ProjectCard
-                          href={project.href}
-                          active={project.active}
-                          archived={project.archived}
-                          key={project.title}
-                          title={project.title}
-                          description={project.description}
-                          dates={project.dates}
-                          tags={project.technologies}
-                          image={project.image}
-                          video={project.video}
-                          links={project.links}
-                        />
-                      </BlurFade>
-                    )
-                  )}
-                </div>
-              </div>
-            </BlurFade>
-          </BlurFade>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+            {DATA.projects.map((project, id) => (
+              <BlurFade
+                key={project.title}
+                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
+              >
+                <ProjectCard
+                  href={project.href}
+                  key={project.title}
+                  title={project.title}
+                  description={project.description}
+                  dates={project.dates}
+                  tags={project.technologies}
+                  image={project.image}
+                  video={project.video}
+                  links={project.links}
+                />
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
 
