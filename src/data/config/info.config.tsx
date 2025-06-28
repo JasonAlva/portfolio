@@ -1,4 +1,5 @@
 import { Icons } from "@/components/icons";
+import Navbar from "@/components/navbar";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
@@ -29,47 +30,36 @@ export const DATA = {
       end: "2027",
     },
   ],
-  navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
-  ],
+  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
     email: "hello@example.com",
-    tel: "+123456789",
+    tel: "",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/JasonAlva",
         icon: Icons.github,
 
         navbar: true,
       },
+      Resume: {
+        name: "Resume",
+        url: "",
+        icon: NotebookIcon,
+        navbar: true,
+      },
+      Leetcode: {
+        name: "LeetCode",
+        url: "https://leetcode.com/u/_jasonalva_/",
+        icon: Icons.leetcodeIcon,
+        navbar: true,
+      },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/jason-alva/",
         icon: Icons.linkedin,
 
         navbar: true,
-      },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
-        navbar: true,
-      },
-      email: {
-        name: "Send Email",
-        url: "#",
-        icon: Icons.email,
-
-        navbar: false,
       },
     },
   },

@@ -14,7 +14,6 @@ import { Lens } from "@/components/ui/lens";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { useState } from "react";
 import Markdown from "react-markdown";
-import { PROJECTS } from "../data/config/project.config";
 import { ProjectCard } from "@/components/project-card";
 import { PlaceholdersAndVanishInput } from "@/components/acernityui/placeholders-and-vanish-input";
 import { toast } from "sonner";
@@ -31,10 +30,10 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [triggerDisappear, setTriggerDisappear] = useState(false);
   const placeholders = [
-    "Send message to 0xSabdadev",
-    "Connect to the decentralized future",
-    "Drop a message, let's build the metaverse",
-    "Deploy your ideas, no central authority",
+    "Send a message to me",
+    "Drop a message, let's build a project",
+    "You can type message here",
+    "Dont be hesitant",
     "The chain awaits your next big move",
   ];
 
@@ -86,7 +85,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 ">
       <Spotlight
-        className="fixed -top-40 left-0 md:left-60 md:-top-20"
+        className="fixed -top-40 left-0 md:-left-30 md:-top-110 opacity-100"
         fill="white"
       />
 
@@ -108,34 +107,32 @@ export default function Home() {
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <div className="flex flex-wrap gap-1 h-full w-full">
                   <Link href={DATA.github} target="_blank">
-                    <Badge variant="outline" className="rounded-full p-1 pe-2">
+                    <Badge
+                      variant="outline"
+                      className="rounded-full cursor-pointer p-1 pe-2"
+                    >
                       <Icons.github className="size-11" />
                       <span>Github</span>
                     </Badge>
                   </Link>
                   <Link href={DATA.leetcode} target="_blank">
-                    <Badge variant="outline" className="rounded-full  p-1 pe-2">
+                    <Badge
+                      variant="outline"
+                      className="rounded-full cursor-pointer p-1 pe-2"
+                    >
                       <Icons.leetcodeIcon className="size-20" />
                       <span>Leetcode</span>
                     </Badge>
                   </Link>
                   <Link href={DATA.github} target="_blank">
-                    <Badge variant="outline" className="rounded-full  p-1 pe-2">
+                    <Badge
+                      variant="outline"
+                      className="rounded-full cursor-pointer  p-1 pe-2"
+                    >
                       <NotebookIcon className="size-20" />
                       <span>Resume</span>
                     </Badge>
                   </Link>
-
-                  {/* <Badge variant="secondary" className="cursor-pointer">
-                    Github
-                  </Badge>
-                  <Badge variant="secondary" className="cursor-pointer"></Badge>
-                  <Link href={DATA.resume} target="_blank">
-                    <Badge variant="secondary" className="flex cursor-pointer">
-                      <span className="size-4 mr-1">✨</span>
-                      Resume
-                    </Badge>
-                  </Link> */}
                 </div>
               </BlurFade>
             </div>
@@ -238,22 +235,21 @@ export default function Home() {
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
               <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                Web3 Messaging Hub 🈯️
+                Contact Me
               </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                No Centralized Vibes
+                Get in Touch
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Got something to say? Drop your message below, and let’s talk
-                blockchain, crypto, and all things decentralized. No spam, just
-                straight-up web3 vibes.
+                Got something to say? Drop your message below, and let’s talk.
+                Drop your name and message.
               </p>
               <div className="pt-10 flex flex-row ">
                 {/* Name Input */}
                 <div className="sm:w-1/3 w-full">
                   <PlaceholdersAndVanishInput
                     type="text"
-                    placeholders={["Ur name dude"]}
+                    placeholders={["Your name"]}
                     value={name}
                     onChange={handleNameChange}
                     onSubmit={onSubmit}
