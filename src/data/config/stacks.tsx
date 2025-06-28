@@ -1,4 +1,3 @@
-import { BiLogoJava } from "react-icons/bi";
 import { FaJava } from "react-icons/fa";
 import {
   SiAndroid,

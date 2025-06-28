@@ -1,7 +1,4 @@
 "use client";
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Button } from "@/components/ui/button";
 
 import { BlurFade } from "@/components/magicui/blur-fade";
 import { Skill } from "@/components/Skill";
@@ -27,7 +24,7 @@ export default function Home() {
   const [mail, setMail] = useState("");
   const [name, setName] = useState("");
   const [isInputLoading, setIsInputLoading] = useState(false);
-  const [message, setMessage] = useState("");
+
   const [triggerDisappear, setTriggerDisappear] = useState(false);
   const placeholders = [
     "Send a message to me",
