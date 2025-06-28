@@ -19,6 +19,8 @@ import { ProjectCard } from "@/components/project-card";
 import { PlaceholdersAndVanishInput } from "@/components/acernityui/placeholders-and-vanish-input";
 import { toast } from "sonner";
 import { ResumeCard } from "@/components/resume-card";
+import { Icons } from "@/components/icons";
+import { NotebookIcon } from "lucide-react";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Home() {
@@ -87,6 +89,7 @@ export default function Home() {
         className="fixed -top-40 left-0 md:left-60 md:-top-20"
         fill="white"
       />
+
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -104,7 +107,26 @@ export default function Home() {
               />
               <BlurFade delay={BLUR_FADE_DELAY}>
                 <div className="flex flex-wrap gap-1 h-full w-full">
-                  <Badge variant="secondary" className="cursor-pointer">
+                  <Link href={DATA.github} target="_blank">
+                    <Badge variant="outline" className="rounded-full p-1 pe-2">
+                      <Icons.github className="size-11" />
+                      <span>Github</span>
+                    </Badge>
+                  </Link>
+                  <Link href={DATA.leetcode} target="_blank">
+                    <Badge variant="outline" className="rounded-full  p-1 pe-2">
+                      <Icons.leetcodeIcon className="size-20" />
+                      <span>Leetcode</span>
+                    </Badge>
+                  </Link>
+                  <Link href={DATA.github} target="_blank">
+                    <Badge variant="outline" className="rounded-full  p-1 pe-2">
+                      <NotebookIcon className="size-20" />
+                      <span>Resume</span>
+                    </Badge>
+                  </Link>
+
+                  {/* <Badge variant="secondary" className="cursor-pointer">
                     Github
                   </Badge>
                   <Badge variant="secondary" className="cursor-pointer"></Badge>
@@ -113,7 +135,7 @@ export default function Home() {
                       <span className="size-4 mr-1">✨</span>
                       Resume
                     </Badge>
-                  </Link>
+                  </Link> */}
                 </div>
               </BlurFade>
             </div>
