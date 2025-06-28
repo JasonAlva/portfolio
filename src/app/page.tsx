@@ -71,7 +71,7 @@ export default function Home() {
       // Show success toast
       toast.success(" Tx confirmed! live on-chain to 0xSabdadev!");
       // Update local storage to indicate subscription
-      localStorage.setItem("devwtf-nsl", data.id);
+      // localStorage.setItem("devwtf-nsl", data.id);
       // Update state to reflect subscription
 
       setTriggerDisappear(false);
