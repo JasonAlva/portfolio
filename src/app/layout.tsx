@@ -16,12 +16,12 @@ export const metadata: Metadata = {
   description: "Portfolio",
   openGraph: {
     title: "My Portfolio",
-    description: "T portfolio site",
+    description: "portfolio site",
     url: "https://jasonalva.vercel.app",
     siteName: "My Portfolio",
     images: [
       {
-        url: "/me.png",
+        url: "/me.jpg",
         width: 1200,
         height: 630,
         alt: "My Portfolio Image",
