@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";

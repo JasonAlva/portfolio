@@ -38,13 +38,14 @@ export default function Navbar() {
         ))}
         <Separator orientation="vertical" className="h-full" />
         {Object.entries(DATA.contact.social)
-          .filter(([_, social]) => social.navbar)
+          .filter(([, social]) => social.navbar)
           .map(([name, social]) => (
             <DockIcon key={name}>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Link
                     href={social.url}
+                    target="_blank"
                     className={cn(
                       buttonVariants({ variant: "ghost", size: "icon" }),
                       "size-12"
