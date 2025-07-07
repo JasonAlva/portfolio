@@ -9,7 +9,8 @@ export const DATA = {
   initials: "profile",
   github: "https://github.com/JasonAlva",
   leetcode: "https://leetcode.com/u/_jasonalva_/",
-  resume: "www.google.com",
+  resume:
+    "https://drive.google.com/file/d/1U47wWOOpXRekR7OLiLnPpT7PQKIDEkgN/view?usp=drive_link",
   bio: "Hey there! I'm an aspiring full-stack developer on a hands-on journey through the world of web development, machine learning, and everything in between. From designing interactive front-ends with React to building solid back-end APIs and exploring the logic behind intelligent systems, I'm constantly learning, building, and improving. I believe growth comes from getting my hands dirty with real projects—some work, some break, but all teach something new.",
 
   education: [
@@ -44,7 +45,7 @@ export const DATA = {
       },
       Resume: {
         name: "Resume",
-        url: "",
+        url: "https://drive.google.com/file/d/1U47wWOOpXRekR7OLiLnPpT7PQKIDEkgN/view?usp=drive_link",
         icon: NotebookIcon,
         navbar: true,
       },
