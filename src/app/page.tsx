@@ -121,7 +121,7 @@ export default function Home() {
                       <span>Leetcode</span>
                     </Badge>
                   </Link>
-                  <Link href={DATA.github} target="_blank">
+                  <Link href={DATA.resume} target="_blank">
                     <Badge
                       variant="outline"
                       className="rounded-full cursor-pointer  p-1 pe-2"
