@@ -1,10 +1,11 @@
-import { FaJava } from "react-icons/fa";
+import { FaJava, FaPython } from "react-icons/fa";
 import {
   SiCircle,
   SiCss3,
   SiDart,
   SiDocker,
   SiExpress,
+  SiFastapi,
   SiFigma,
   SiFirebase,
   SiFlutter,
@@ -60,6 +61,8 @@ export const STACKS: stacksProps = {
   Flowbite: <Flowbite iconSize={iconSize} />,
 
   // Backend
+  Python: <FaPython size={iconSize} />,
+  FastApi: <SiFastapi size={iconSize} color="#009485" />,
   Express: <SiExpress size={iconSize} />,
   Prisma: <SiPrisma size={iconSize} color="#10B981" />, // emerald-500
   Firebase: <SiFirebase size={iconSize} color="#F59E0B" />, // yellow-500

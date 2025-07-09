@@ -29,8 +29,6 @@ export default function Home() {
   const placeholders = [
     "Send a message to me",
     "Drop a message, let's build a project",
-    "You can type message here",
-    "Dont be hesitant",
     "The chain awaits your next big move",
   ];
 
